@@ -497,6 +497,7 @@ header {
     list-style: none;
     margin: 50px;
     padding: 20px;
+    text-align: center;
 
     .outcome-item {
         background: white;
