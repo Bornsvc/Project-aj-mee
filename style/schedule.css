@@ -74,15 +74,6 @@
         background-color: #fff9e6;
         font-weight: bold;
     }
-    .page-number {
-        text-align: center;
-        font-size: 14px;
-        color: #666;
-        margin-top: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #f9f9f9;
-    }
     .session-header {
         font-size: 11px;
         line-height: 1.2;
@@ -96,7 +87,6 @@
     max-width: 1200px;
     margin: 0 auto;
     background: white;
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
@@ -194,7 +184,6 @@
     max-width: 1200px;
     margin: 2rem auto;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -262,14 +251,14 @@ th, td {
     font-style: italic;
     padding: 2px;
 }
-/* ให้ div .table-container เลื่อนซ้าย-ขวาได้ */
+
 .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 2rem;
   }
   
-  /* ป้องกันตารางถูกบีบให้แคบเกินไป */
+
   .schedule-table {
     min-width: 800px;
     width: 100%;
@@ -282,9 +271,10 @@ th, td {
     font-size: 1rem;
     text-align: left;
     border: 1px solid #ddd;
+    border-top: none;
   }
   
-  /* ปรับเฉพาะมือถือ */
+
   @media (max-width: 768px) {
     .schedule-tabs {
       flex-direction: column;
