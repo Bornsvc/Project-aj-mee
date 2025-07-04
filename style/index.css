@@ -198,47 +198,82 @@ header {
 }
 
 .hero {
-    background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/img/back-ground-brander.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
-    padding: 120px 0 80px;
+    height: 40vh;
+    display: flex;
+    margin-top: calc(1rem + 54px);
+    align-items: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
+
+    .patusai {
+        position: absolute;
+        background-image: url('/img/patusai.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        width: 30%;
+        height: 100%;
+    }
+
+    .thard-lrong {
+        position: absolute;
+        background-image: url('/img/thard-lrong.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 50px;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+    }
+
 
     .hero-content {
         p {
-            margin: 15px 0 25px 0;
+            margin: 10px 0 15px 0;
+        }
+    }
+    .conference-details {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+    
+        .detail-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                color: #bbe1fa;
+            }
+        
+            p {
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
         }
     }
 }
 
-.conference-details {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
 
-.detail-item {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        color: #bbe1fa;
-    }
-
-    p {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-}
 
 
 /* Sections */
@@ -270,7 +305,6 @@ header {
 
     .about-content {
         display: flex;
-        flex-wrap: wrap;
         gap: 3rem;
         padding: 2rem;
         align-items: flex-start;
@@ -295,16 +329,175 @@ header {
                     color: #444;
                 }
             }
+
+            .objectives-list-Expected {
+                margin-left: 40px;
+            }
         }
 
-        .about-poster {
-            flex: 1 1 35%;
+        .download {
+            flex: 1 1 40%;
             text-align: center;
 
             img {
                 width: 100%;
                 height: auto;
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            .downloads-header {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .downloads-title {
+                font-size: 3.5em;
+                font-weight: 700;
+                background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 20px;
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            .downloads-underline {
+                height: 4px;
+                background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+                border-radius: 2px;
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .downloads-underline::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+                animation: shimmer 2s infinite;
+            }
+            
+            @keyframes shimmer {
+                0% { left: -100%; }
+                100% { left: 100%; }
+            }
+            
+            .downloads-list {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .download-item {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .download-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+                transition: left 0.5s;
+            }
+            
+            .download-item:hover::before {
+                left: 100%;
+            }
+            
+            .download-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+                background: rgba(255, 255, 255, 0.95);
+            }
+            
+            .pdf-icon {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 20px;
+                transition: all 0.3s ease;
+            }
+            
+            .download-item:hover .pdf-icon {
+                transform: scale(1.1);
+            }
+            
+            .download-link {
+                color: #2c3e50;
+                text-decoration: none;
+                font-size: 1.3em;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .download-link:hover {
+                color: #3282b8;
+                transform: translateX(5px);
+            }
+            
+            .download-link::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+                transition: width 0.3s ease;
+            }
+            
+            .download-link:hover::after {
+                width: 100%;
+            }
+            
+            @media (max-width: 600px) {
+                .downloads-container {
+                    padding: 30px 20px;
+                }
+                
+                .downloads-title {
+                    font-size: 2.5em;
+                }
+                
+                .download-item {
+                    padding: 15px;
+                }
+                
+                .pdf-icon {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 15px;
+                }
+                
+                .download-link {
+                    font-size: 1.1em;
+                }
             }
         }
 
@@ -544,6 +737,15 @@ header {
     }
 }
 
+#schedule {
+    .container {
+        @media (max-width: 375px) {
+            #schedule {
+              display: none;
+            }
+        }
+    }
+}
 
 
 /* Schedule Section */
@@ -571,6 +773,63 @@ header {
 
 #table-container-2 {
     display: none;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    th {
+        background-color: #e0e0e0;
+        font-weight: bold;
+    }
+    .time-col {
+        background-color: #f0f0f0;
+        font-weight: bold;
+        width: 80px;
+    }
+    .group1 {
+        background-color: #e6f3ff;
+    }
+    .group2 {
+        background-color: #fff2e6;
+    }
+    .group3 {
+        background-color: #e6f7ff;
+    }
+    .group4 {
+        background-color: #ffe6e6;
+    }
+    .break-row {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+    .lunch-row {
+        background-color: #fff9e6;
+        font-weight: bold;
+    }
+    .page-number {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+    .session-header {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    .topic-cell {
+        font-size: 12px;
+    }
 }
 
 .table-container {
@@ -670,6 +929,118 @@ header {
 
     }
 }
+
+.table-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.schedule-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+.header-row {
+    background-color: #d4d4d4;
+    font-weight: bold;
+}
+.time-col {
+    background-color: #e8e8e8;
+    font-weight: bold;
+    width: 80px;
+}
+.group1 {
+    background-color: #e6f3ff;
+}
+.group2 {
+    background-color: #fff2cc;
+}
+.group3 {
+    background-color: #dae8fc;
+}
+.group4 {
+    background-color: #f8cecc;
+}
+.presentation-header {
+    background-color: #b8b8b8;
+    font-weight: bold;
+    font-size: 14px;
+}
+.break-row {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+.topic-header {
+    font-weight: bold;
+    font-size: 11px;
+    padding: 4px;
+}
+.agenda-subheader {
+    font-size: 10px;
+    font-style: italic;
+    padding: 2px;
+}
+
 
 /* Footer */
 footer {
@@ -771,3 +1142,129 @@ footer {
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
 }
+
+
+/* ✅ เพิ่มในไฟล์ CSS ท้ายสุด */
+
+@media (max-width: 768px) {
+    /* ✅ ซ่อน section#schedule */
+    #schedule {
+      display: none !important;
+    }
+  
+    /* ✅ จัดการ Header */
+    header .container {
+      display: none;
+    }
+    header .logo {
+      display: none;
+    }
+  
+    /* ✅ แสดง navbar responsive */
+    .container-responsive {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 20px;
+    }
+  
+    .nav-links-responsive {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 999;
+      padding: 1rem 0;
+    }
+  
+    .nav-links-responsive li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    /* ✅ ทำให้ hero content ไม่ล้นจอ */
+    .hero {
+      flex-direction: column;
+      padding: 2rem;
+      height: auto;
+    }
+  
+    .hero .patusai,
+    .hero .thard-lrong {
+      display: none;
+    }
+  
+    .conference-details {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .target-cards {
+      grid-template-columns: 1fr;
+      margin: 1rem;
+    }
+  
+    .themes-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .partner-con {
+      grid-template-columns: 1fr;
+    }
+  
+    .outcomes-list {
+      grid-template-columns: 1fr;
+      margin: 1rem;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .container-responsive {
+      padding: 0.8rem 1rem;
+    }
+  
+    .download-link {
+      font-size: 1rem;
+    }
+  
+    .downloads-title {
+      font-size: 2rem;
+    }
+  
+    .pdf-icon {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .download-item {
+      padding: 10px;
+    }
+  
+    .tab-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero-title {
+      font-size: 1.8rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
