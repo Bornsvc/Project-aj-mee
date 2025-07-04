@@ -243,215 +243,62 @@
     }
 }
 
-/* outcomes section */
-#Outcomes {
-    background: #f8f9fa;
-    padding: 2rem 0;
-}
-
-.outcomes-list {
-    display: grid;
-    grid-template-columns: repeat(1fr, 1fr);
-    gap: 1.5rem;
-    padding: 0 20px;
-    list-style: none;
-    margin: 50px;
-    padding: 20px;
-    text-align: center;
-
-    .outcome-item {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        h4 {
-            color: #3282b8;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-    }
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-    header {
-        .container {
-            display: none;
-        }
-
-        .logo {
-            display: none;
-        }
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .conference-details {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
     .about-content {
-        flex-direction: column;
-        gap: 2rem;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1.5rem 1rem;
     }
-
+  
     .about-info,
-    .about-poster {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .about-text h3 {
-        font-size: 1.25rem;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .schedule-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .schedule-time {
-        width: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    /* ✅ ซ่อน section#schedule */
-    #schedule {
-      display: none !important;
-    }
-  
-    /* ✅ จัดการ Header */
-    header .container {
-      display: none;
-    }
-    header .logo {
-      display: none;
-    }
-  
-    /* ✅ แสดง navbar responsive */
-    .container-responsive {
-      display: flex !important;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 20px;
-    }
-  
-    .nav-links-responsive {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 70px;
-      left: 0;
+    .download {
       width: 100%;
-      background: white;
-      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-      z-index: 999;
-      padding: 1rem 0;
-    }
-  
-    .nav-links-responsive li {
-      margin: 10px 0;
-      text-align: center;
-    }
-  
-    /* ✅ ทำให้ hero content ไม่ล้นจอ */
-    .hero {
-      flex-direction: column;
-      padding: 2rem;
-      height: auto;
-    }
-  
-    .hero .patusai,
-    .hero .thard-lrong {
-      display: none;
-    }
-  
-    .conference-details {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .about-content {
-      flex-direction: column;
-      padding: 1rem;
-    }
-  
-    .target-cards {
-      grid-template-columns: 1fr;
-      margin: 1rem;
-    }
-  
-    .themes-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .partner-con {
-      grid-template-columns: 1fr;
-    }
-  
-    .outcomes-list {
-      grid-template-columns: 1fr;
-      margin: 1rem;
-    }
-  
-    .footer-content {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 375px) {
-    .container-responsive {
-      padding: 0.8rem 1rem;
-    }
-  
-    .download-link {
-      font-size: 1rem;
+      max-width: 100%;
     }
   
     .downloads-title {
       font-size: 2rem;
     }
   
-    .pdf-icon {
-      width: 35px;
-      height: 35px;
+    .downloads-list {
+      gap: 1rem;
     }
   
     .download-item {
-      padding: 10px;
+      flex-direction: row;
+      padding: 1rem;
     }
   
-    .tab-button {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+    .pdf-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
+      font-size: 11px;
     }
   
-    .hero-title {
-      font-size: 1.8rem;
-    }
-  
-    .hero-subtitle {
+    .download-link {
       font-size: 1rem;
     }
+  
+    .about-text h3 {
+      font-size: 1.3rem;
+    }
+  
+    .about-text p,
+    .objectives-list li,
+    .objectives-list-Expected li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  
+    .downloads-header {
+      margin-bottom: 1rem;
+    }
+  
+    .about .download img {
+      max-width: 100%;
+      height: auto;
+    }
   }
+  
   

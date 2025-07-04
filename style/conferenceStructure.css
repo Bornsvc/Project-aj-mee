@@ -1,41 +1,170 @@
-/* Conference structure Section */
+.confer {
+    padding: 0 200px;
+
+}
+@media (max-width: 768px) {
+    .confer {
+      padding: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .confer {
+      padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .confer {
+      padding: 0;
+    }
+}
+
+/* Conference Structure Section */
 .conference-title {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    text-align: start;
-    margin: 5px;
-    padding: 0 100px;
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
 
-    h3 {
-        color: #0f4c75;
-        margin-bottom: 1rem;
-        text-align: start;
-    }
+.title-1 {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-    p {
+.title-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+}
 
-        font-size: 0.95rem;
-    }
+.title-1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.title-1 h3 {
+    color: #0f4c75;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.title-1 p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 /* Partner & Conclusion Section */
 .partner-con {
-    background: #f8f9fa;
-    padding: 2rem ;
-    text-align: start;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    padding: 4rem;
+    border-radius: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    
-    h3{
-        color: #3282b8;
-        font-size: 20px;
-        margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-con::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(15, 76, 117, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(50, 130, 184, 0.05) 0%, transparent 50%);
+}
+
+.partner, .conclusion {
+    position: relative;
+    z-index: 1;
+}
+
+.partner h3, .conclusion h3 {
+    color: #0f4c75;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.partner h3::after, .conclusion h3::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+    border-radius: 2px;
+}
+
+.partner p, .conclusion p {
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 1rem;
     }
 
-    p{
-        font-size: 0.95rem;
-        line-height: 1.6rem;
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .conference-title {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .title-1 {
+        padding: 2rem;
+    }
+
+    .partner-con {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .title-1 {
+        padding: 1.5rem;
+    }
+
+    .partner-con {
+        padding: 2rem;
+    }
+
+    .conference-title {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }

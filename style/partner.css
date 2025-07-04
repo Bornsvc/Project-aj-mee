@@ -15,7 +15,7 @@
 
 .target-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 2rem;
     margin: 2rem;
     padding: 20px;
