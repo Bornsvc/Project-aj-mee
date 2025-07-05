@@ -141,6 +141,7 @@
         .agenda-cell {
             width: 35%;
             color: #333;
+            vertical-align: middle;
 
             .keynote-title {
                 font-weight: bold;

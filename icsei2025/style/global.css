@@ -71,6 +71,7 @@ body {
         display: flex;
         gap: 1rem;
 
+        img:nth-child(1),
         img:nth-child(8),
         img:nth-child(9) {
             background-color: white;
@@ -531,10 +532,6 @@ header {
 
     .hamburger {
         display: flex;
-    }
-
-    .logo {
-        font-size: 1.5rem;
     }
 }
 
