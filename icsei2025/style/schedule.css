@@ -128,6 +128,18 @@
     width: 100%;
     border-collapse: collapse;
 
+    tr   .keynote-title {
+        font-weight: bold;
+        color: #2c5aa0;
+    }
+
+    tr .agenda-cell .keynote-description {
+        font-size: 14px;
+        margin-top: 3px;
+        color: #555;
+        vertical-align: middle;
+    }
+
     tr:nth-child(even) {
         background-color: #f8f9fa;
 
@@ -141,18 +153,6 @@
         .agenda-cell {
             width: 35%;
             color: #333;
-            vertical-align: middle;
-
-            .keynote-title {
-                font-weight: bold;
-                color: #2c5aa0;
-            }
-
-            .keynote-description {
-                font-size: 14px;
-                margin-top: 3px;
-                color: #555;
-            }
         }
 
         .moderator-cell {
