@@ -1,5 +1,5 @@
 // Load navbar component into the page
-fetch("../components/navbar.html")
+fetch("/navbar.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("navbar-container").innerHTML = data;
