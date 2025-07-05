@@ -1,0 +1,49 @@
+.PublicationAndPartners-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+        text-align: center;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p{
+                margin-bottom: 2rem;
+            }
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .button-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+            a {
+                text-decoration: none;
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+}
