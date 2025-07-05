@@ -1,0 +1,35 @@
+.resgis {
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 50px;
+
+    ul{
+        font-weight: bold;
+        padding: 10px 5px;
+    }
+
+}
+
+.register-button {
+    color: #fff;
+    background: linear-gradient(90deg, #2c5aa0 60%, #4f8edc 100%);
+    border: none;
+    border-radius: 30px;
+    padding: 14px 48px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(44, 90, 160, 0.15);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.register-button:hover {
+    background: linear-gradient(90deg, #4f8edc 60%, #2c5aa0 100%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(44, 90, 160, 0.25);
+}
