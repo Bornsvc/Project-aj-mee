@@ -1,0 +1,18 @@
+.downloadAndSubmission-container {
+    margin-left: 3rem;
+    padding: 1rem 0;
+
+    .taitle {
+        margin-bottom: 3rem;
+    }
+
+    li {
+        font-size:20px;
+        font-weight: medium;
+        color: #0f4c75;
+
+        span {
+            color: black;
+        }
+    }
+}
