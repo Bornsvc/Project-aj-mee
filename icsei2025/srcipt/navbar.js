@@ -1,5 +1,5 @@
 // Load navbar component into the page
-fetch("/navbar.html")
+fetch("/icsei2025/navbar.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("navbar-container").innerHTML = data;

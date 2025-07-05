@@ -1,4 +1,30 @@
 
+
+.registerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.registerButton button {
+    background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(15, 76, 117, 0.4);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
 /* About Section */
 .about {
     background: #f8f9fa;
