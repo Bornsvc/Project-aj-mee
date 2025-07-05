@@ -12,15 +12,13 @@
   </head>
 
   <body>
-    <div id="navbar-container"></div>
+    <div id="logo-container"></div>
     <div id="hero-container"></div>
     <!-- About Section -->
     <section id="about" class="section about">
-      <div class="container fade-in-up">
-        <div class="registerButton">
-          <button>Register & Submittion</button>
-        </div>
-        <div class="about-content">
+      <div class="container">
+        <div id="importantDateComponent-container"></div>
+        <div class="about-content fade-in-up">
           <div class="about-info">
             <div class="about-text">
               <h3>Conference Overview</h3>
@@ -92,47 +90,14 @@
                 </ul>
             </div>
           </div>
-        
-          <div class="download">
-              <a href="/doc/artboard.pdf" class="about-poster" target="_blank">
-                <img
-                  src="./img/poster.png"
-                  alt="Conference Poster"
-                  loading="lazy"
-                />
-              </a>
-              <div>
-                <div class="downloads-header">
-                    <h1 class="downloads-title">Downloads</h1>
-                    <div class="downloads-underline"></div>
-                </div>
-                
-                <div class="downloads-list">
-                    <div class="download-item">
-                        <div class="pdf-icon">PDF</div>
-                        <a href="./doc/abstract-template.docx" class="download-link">Download abstract template</a>
-                    </div>
-                    
-                    <div class="download-item">
-                        <div class="pdf-icon">PDF</div>
-                        <a href="./doc/artboard.pdf" class="download-link">Download Call for Paper</a>
-                    </div>
-
-                    <div class="download-item">
-                        <div class="pdf-icon">PDF</div>
-                        <a href="./doc/full-paper-template.docx" class="download-link">Download full paper template</a>
-                    </div>
-                </div>
-              </div>
-          </div>
-
         </div>
       </div>
     </section>
 
     <div id="footer-container"></div>
-    <script src="./srcipt/navbar.js"></script>
-    <script src="./srcipt/footer.js"></script>
-    <script src="./srcipt/hero.js"></script>
+      <script src="./srcipt/logo.js"></script>
+      <script src="./srcipt/footer.js"></script>
+      <script src="./srcipt/hero.js"></script>
+      <script src="./srcipt/importantDateComponent.js"></script>
   </body>
 </html>
