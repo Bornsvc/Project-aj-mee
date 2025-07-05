@@ -1,7 +1,7 @@
 .resgis {
-    width: 400px;
-    margin-top: 30px;
-    margin-left: 50px;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+    padding: 0 1rem;
 
     ul{
         font-weight: bold;
@@ -10,26 +10,35 @@
 
 }
 
-.register-button {
-    color: #fff;
-    background: linear-gradient(90deg, #2c5aa0 60%, #4f8edc 100%);
-    border: none;
-    border-radius: 30px;
-    padding: 14px 48px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 16px rgba(44, 90, 160, 0.15);
-    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-    outline: none;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    display: inline-block;
-}
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
 
-.register-button:hover {
-    background: linear-gradient(90deg, #4f8edc 60%, #2c5aa0 100%);
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(44, 90, 160, 0.25);
+    .register-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+        
+    
+        &:hover {
+            border-color: #2a5298;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 60, 114, 0.4);
+        }
+    }
 }
