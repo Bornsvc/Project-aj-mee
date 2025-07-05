@@ -44,21 +44,25 @@ body {
     background-color: white;
     max-width: 500px;
     margin: 20px auto;
-  }
-  
-  .important-dates h2 {
-    color: #0f4c75;
-  }
-  
-  .important-dates ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .important-dates li {
-    padding: 5px 0;
-    font-size: 1rem;
-  }
+
+    h2 {
+        color: #0f4c75;
+    }
+
+    ul {
+        list-style: none;
+        padding-right: 60px;
+    }
+
+    li {
+        padding: 5px 0;
+        font-size: 1rem;
+
+        span {
+            color: gray;
+        }
+    }
+}
   
 
 .logo-container {
@@ -600,35 +604,9 @@ body {
 footer {
     background: #1a1a1a;
     color: white;
-    padding: 3rem 1rem 1rem;
+    padding: 1rem 0;
     text-align: center;
-  
-    .footer-content {
-     display: flex;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      text-align: left;
-  
-      .footer-section {
-        flex: 1;
-        h3 {
-          margin-bottom: 1rem;
-          color: #3282b8;
-        }
-  
-        p,
-        a {
-          color: #ccc;
-          text-decoration: none;
-          line-height: 1.6;
-          font-size: 0.95rem;
-  
-          &:hover {
-            color: #3282b8;
-          }
-        }
-      }
-    }
+
   
     @media (max-width: 600px) {
       .footer-content {
