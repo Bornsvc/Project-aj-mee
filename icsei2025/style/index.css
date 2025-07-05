@@ -54,6 +54,33 @@
                     line-height: 1.6;
                     color: #444;
                 }
+
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 14px 28px;
+                    background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+
+                    .download-icon {
+                        width: 20px;
+                        height: 20px;
+                        fill: currentColor;
+                    }
+
+                    &:hover {
+                        border-color: #2a5298;
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 25px rgba(30, 60, 114, 0.4);
+                    }
+                }
             }
 
             .objectives-list-Expected {
